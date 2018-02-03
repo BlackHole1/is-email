@@ -17,3 +17,17 @@ $ npm install is-email
 ### isEmail(string)
 
 Loosely checks whether a `string` is an email address.
+
+## Use
+
+```javascript
+isEmail('team@segment.io') // => true
+isEmail('team+@segmentio.com') // => true
+isEmail('te-am@segmentio.com') // => true
+isEmail('team@segmen-tio.com') // => true
+isEmail('t-eam+34@segme-ntio.com') // => true
+
+isEmail('team@.org') // => false
+isEmail('team+45.io') // => false
+isEmail('@segmentio.com') // => false
+```
